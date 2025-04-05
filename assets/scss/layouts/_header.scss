@@ -1,0 +1,141 @@
+#header {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 60px 0px #0000001a;
+  padding: 0 8rem;
+  @include max(1600px) {
+    padding: 0 4rem;
+  }
+  @include max(575px) {
+    padding: 0 1rem;
+  }
+  @include max(348px){
+   padding: 0px 0px;
+}
+.col-12{
+    padding: 0px;
+}
+  .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    .navbar-brand {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-right: 0px;
+      img {
+        margin-bottom: -60px;
+        border-radius: 2px;
+      }
+     
+    }
+    .container-fluid {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  .navbar-nav {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include max(1200px){
+        padding: 10px 0px;
+    }
+      
+      a {
+        font-family: $f-secondary;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -4%;
+        color: #2b2a29;
+        padding-right: 86px;
+        &.active {
+          font-weight: 500;
+          color: #2b2a29;
+        }
+        @include max(1400px){
+            padding-right: 70px;
+        }
+       
+      }
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    @include min(1200px) {
+      display: none;
+    }
+    .nav-imge {
+      position: relative;
+      padding: 0;
+
+      img {
+        max-width: 80% !important;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    #navicon {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      padding: 0;
+      border-radius: 5px;
+      span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #b08b54;
+        border-radius: 9px;
+        opacity: 1;
+        margin: 0 auto;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        right: 0;
+        &:first-child {
+          top: 9px;
+          width: 50%;
+          left: 0px;
+          right: 100%;
+        }
+        &:last-child {
+          top: 21px;
+          width: 75%;
+          left: 0px;
+          right: 100%;
+        }
+        &:nth-child(2) {
+          top: 15px;
+          width: 100%;
+          left: 0px;
+        }
+      }
+      &.open {
+        span {
+          &:first-child {
+            transform: rotate(135deg);
+            top: 15px;
+            width: 100%;
+          }
+          &:last-child {
+            transform: rotate(-135deg);
+            top: 15px;
+            width: 100%;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
